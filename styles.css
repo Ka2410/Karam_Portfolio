@@ -1568,17 +1568,10 @@ body.venom-hunt-active .venom-shadow-target { animation: venom-shadow-scamper 1.
 
 /* Compact desktop windows (for example, when the browser is snapped beside another app).
    These rules require a mouse/hover pointer so phone layouts remain untouched. */
-@media (hover: hover) and (pointer: fine) and (min-width: 481px) and (max-width: 1100px) {
+@media (hover: hover) and (pointer: fine) and (min-width: 481px) and (max-width: 1400px) {
   .page-shell { width: 100%; padding-right: clamp(16px, 3vw, 34px); padding-left: clamp(16px, 3vw, 34px); padding-bottom: 0; }
   .page-main { justify-content: center; padding: 66px 0 24px; }
-
-  .angled-notch-header { position: absolute; inset: 0 0 auto; width: 100%; height: 54px; overflow: visible; transform: none; pointer-events: none; }
-  .angled-notch-frame, .desktop-venom-frame, .mobile-notch-surface { display: none; }
-  .angled-notch-nav { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; padding: 0 clamp(16px, 3vw, 34px); pointer-events: none; }
-  .angled-notch-link,
-  .angled-notch-projects,
-  .angled-notch-contact { position: relative; inset: auto; display: flex; width: auto; min-width: 0; height: 100%; align-items: center; justify-content: center; padding: 0 3px; font-size: clamp(7px, .9vw, 10px); letter-spacing: .06em; text-align: center; transform: none; }
-  .angled-notch-projects span, .angled-notch-contact span { transform: none; }
+  .project-navigation { top: 74px; right: auto; left: clamp(16px, 3vw, 42px); }
 
   .hero-layout { min-height: min(620px, calc(100svh - 78px)); grid-template-columns: minmax(0, 1fr) minmax(0, .92fr); gap: clamp(14px, 3vw, 34px); }
   .hero-copy, .home-page .hero-copy { min-width: 0; padding-left: 0; transform: none; }
@@ -1623,6 +1616,43 @@ body.venom-hunt-active .venom-shadow-target { animation: venom-shadow-scamper 1.
   .contact-social { min-height: 46px; gap: 5px; padding: 0 5px; font-size: 7px; letter-spacing: .025em; }
   .contact-social svg { width: 15px; height: 15px; }
   .contact-together-glitch { font-size: clamp(28px, 5vw, 46px); }
+
+  /* The three project case studies have their own wide-screen layouts. */
+  .ego-main, .kova-main { max-width: 100%; gap: clamp(42px, 6vw, 82px); padding: clamp(132px, 17vh, 190px) 0 48px; }
+  .ego-hero, .kova-hero { grid-template-columns: minmax(0, 1fr) minmax(0, .86fr); gap: clamp(16px, 3vw, 40px); }
+  .ego-hero h1 { font-size: clamp(42px, 6.5vw, 88px); }
+  .kova-hero h1 { font-size: clamp(42px, 6.2vw, 82px); }
+  .ego-preview-shell, .kova-preview-shell { width: min(100%, 360px); height: min(570px, 68svh); min-height: 330px; justify-self: center; transform: none; }
+  .ego-experience, .kova-experience { column-gap: clamp(18px, 4vw, 52px); }
+  .ego-feature-grid, .kova-feature-grid { gap: clamp(10px, 1.5vw, 16px); }
+  .ego-lookbook, .kova-atmosphere, .ego-visit, .kova-visit { gap: clamp(16px, 3vw, 40px); }
+  .ego-stats, .kova-stats { gap: clamp(8px, 1.5vw, 18px); }
+  .ego-project-footer, .kova-project-footer { flex-wrap: wrap; }
+  body.kova-case-page .project-navigation, body.megawrat-case-page .project-navigation { top: 74px; right: auto; left: clamp(16px, 3vw, 42px); }
+
+  .megawrat-main { max-width: 100%; gap: clamp(42px, 6vw, 76px); padding: clamp(88px, 12vh, 138px) 0 40px; }
+  .megawrat-hero { min-height: min(680px, calc(100svh - 100px)); border-radius: 24px; }
+  .megawrat-hero-copy { width: min(58%, 640px); margin-left: 5%; }
+  .megawrat-hero h1, .megawrat-hero h1.megawrat-title, .megawrat-title { font-size: clamp(42px, 6.5vw, 88px); }
+  .megawrat-intro { font-size: clamp(11px, 1.25vw, 17px); }
+  .megawrat-mascot { height: min(58svh, 540px); }
+  .megawrat-progress { gap: clamp(20px, 4vw, 58px); }
+  .megawrat-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .megawrat-feature-card { min-height: 240px; padding: 22px clamp(16px, 2.5vw, 30px); }
+}
+
+/* Reflow desktop navigation only when the desktop window itself is narrow. */
+@media (hover: hover) and (pointer: fine) and (min-width: 481px) and (max-width: 1100px) {
+  .angled-notch-header { position: absolute; inset: 0 0 auto; width: 100%; height: 54px; overflow: visible; transform: none; pointer-events: none; }
+  .angled-notch-frame, .mobile-notch-surface { display: none; }
+  .desktop-venom-frame { display: block; }
+  .angled-notch-nav { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); align-items: center; padding: 0 clamp(16px, 3vw, 34px); pointer-events: none; }
+  .angled-notch-link,
+  .angled-notch-projects,
+  .angled-notch-contact { position: relative; inset: auto; display: flex; width: auto; min-width: 0; height: 100%; align-items: center; justify-content: center; padding: 0 3px; font-size: clamp(7px, .9vw, 10px); letter-spacing: .06em; text-align: center; transform: none; }
+  .angled-notch-projects span, .angled-notch-contact span { transform: none; }
+  .project-navigation { top: 60px; left: clamp(12px, 3vw, 28px); }
+  body.ego-case-page .project-navigation, body.kova-case-page .project-navigation, body.megawrat-case-page .project-navigation { top: 60px; right: auto; left: clamp(12px, 3vw, 28px); }
 }
 
 @media (hover: hover) and (pointer: fine) and (min-width: 481px) and (max-width: 620px) {
@@ -1651,6 +1681,29 @@ body.venom-hunt-active .venom-shadow-target { animation: venom-shadow-scamper 1.
   .contact-social b { font-size: 8px; }
   .contact-profile-footer { padding: 10px 7px; }
   .contact-copy > p:not(.eyebrow) { font-size: 9px; }
+  .ego-main, .kova-main { gap: 38px; padding: 78px 0 30px; }
+  .ego-hero, .kova-hero { grid-template-columns: minmax(0, 1fr) minmax(0, .86fr); gap: 10px; }
+  .ego-hero h1, .kova-hero h1 { font-size: clamp(34px, 6.4vw, 43px); }
+  .ego-preview-shell, .kova-preview-shell { width: 100%; height: min(390px, 68svh); min-height: 230px; }
+  .ego-experience, .kova-experience { grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); column-gap: 10px; row-gap: 18px; }
+  .ego-feature-grid, .kova-feature-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ego-lookbook, .kova-atmosphere, .ego-visit, .kova-visit { grid-template-columns: 1fr 1fr; gap: 12px; padding: 16px 12px; }
+  .ego-project-footer, .kova-project-footer { flex-direction: row; align-items: center; }
+  .megawrat-main { gap: 38px; padding: 72px 0 30px; }
+  .megawrat-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .78fr); align-items: center; min-height: min(520px, calc(100svh - 95px)); border-radius: 16px; }
+  .megawrat-hero-copy { width: min(100%, 640px); margin: 0 auto 0 3%; padding: 0; }
+  .megawrat-hero h1, .megawrat-hero h1.megawrat-title, .megawrat-title { font-size: clamp(34px, 6.3vw, 42px); }
+  .megawrat-wordmark { font-size: 12px; }
+  .megawrat-wordmark img { width: 40px; height: 34px; }
+  .megawrat-intro { font-size: 10px; }
+  .megawrat-mascot-stage { position: absolute; inset: 0; width: auto; height: auto; margin: 0; overflow: hidden; }
+  .megawrat-mascot { height: min(44svh, 380px); }
+  .megawrat-progress { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 12px; padding: 24px 0; }
+  .megawrat-section-head h2 { font-size: clamp(32px, 6vw, 40px); }
+  .megawrat-features { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .megawrat-feature-card { min-height: 210px; padding: 17px 13px; }
+  .megawrat-feature-card h3 { font-size: 19px; }
+  .megawrat-feature-card p { font-size: 11px; }
 
   /* Restore the desktop service list instead of inheriting phone-only collage placement. */
   .services-layout { position: static; }
