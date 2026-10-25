@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#16140f">
+  <link rel="manifest" href="./site.webmanifest">
+  <meta name="description" content="MEGAWRAT — a community app bringing local ads, nearby services, and lost-and-found together for 10th of Ramadan City.">
+  <title>MEGAWRAT — Project 03 — Karam Rabie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Lemonada:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./site.js"></script>
+</head>
+<body class="projects-page megawrat-case-page">
+  <header class="angled-notch-header" aria-label="Portfolio navigation">
+    <svg class="angled-notch-frame" viewBox="0 0 1680 520" preserveAspectRatio="none" aria-hidden="true"><path d="M1016 -12 V50 C1016 87 1041 112 1078 112 H1511 C1543 112 1568 138 1568 170 V429 C1568 461 1591 480 1622 480 H1686" /></svg>
+    <svg class="mobile-notch-surface" viewBox="0 0 420 68" preserveAspectRatio="none" aria-hidden="true"><path d="M47 1 H373 C383 1 391 9 391 19 V35 C391 48 402 67 419 67 H1 C18 67 29 48 29 35 V19 C29 9 37 1 47 1 Z" /></svg>
+    <nav class="angled-notch-nav" aria-label="Main navigation">
+      <a class="angled-notch-link angled-notch-home" href="./index.html">Home</a>
+      <a class="angled-notch-link angled-notch-about" href="./about.html">About</a>
+      <a class="angled-notch-link angled-notch-services" href="./services.html">Services</a>
+      <a class="angled-notch-link angled-notch-projects" href="./project-01.html" aria-current="page"><span>Projects</span></a>
+      <a class="angled-notch-link angled-notch-contact" href="./contact.html"><span>Contact</span></a>
+    </nav>
+  </header>
+
+  <nav class="project-navigation" aria-label="Project navigation">
+    <a class="project-switch project-switch--previous" href="./project-02.html" aria-label="Previous project: KOVA Café"><span>BACK</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg></a>
+    <button class="project-switch project-switch--next" type="button" disabled aria-label="No next project yet"><span>NEXT</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7" /></svg></button>
+    <span class="project-switch megawrat-soon-notch" role="status" aria-label="MEGAWRAT is coming soon"><span>SOON</span><i aria-hidden="true"></i></span>
+  </nav>
+
+  <div class="page-shell">
+    <main class="page-main megawrat-main">
+      <section class="megawrat-hero" aria-labelledby="megawrat-title">
+        <div class="megawrat-hero-copy">
+          <p class="megawrat-kicker"><span>03</span> / COMMUNITY APP · 10TH OF RAMADAN</p>
+          <p class="megawrat-wordmark"><img src="./assets/megawrat-logo-mark.png" alt="" width="58" height="44"> <span>MEGAWRAT</span></p>
+          <h1 id="megawrat-title" class="megawrat-title" aria-label="العاشر في إيدك" lang="ar" dir="rtl">
+            <span class="megawrat-title-line" aria-hidden="true"><span class="megawrat-title-word megawrat-title-word--light" data-text="العاشر">العاشر</span></span>
+            <span class="megawrat-title-line" aria-hidden="true"><span class="megawrat-title-word megawrat-title-word--light" data-text="في">في</span> <span class="megawrat-title-word megawrat-title-word--lime" data-text="إيدك">إيدك</span></span>
+          </h1>
+          <p class="megawrat-intro" lang="ar" dir="rtl">مجتمع شامل لأهالي العاشر من رمضان. إعلانات وخدمات ومفقودات قريبة منك، في تطبيق واحد.</p>
+          <div class="megawrat-status"><span class="megawrat-status-dot" aria-hidden="true"></span><span>PROJECT IN DEVELOPMENT</span></div>
+          <a class="megawrat-scroll-link" href="#megawrat-progress">EXPLORE THE IDEA <span>↓</span></a>
+        </div>
+        <div class="megawrat-mascot-stage" aria-label="MEGAWRAT mascot">
+          <div class="megawrat-mascot" data-megawrat-mascot>
+            <video class="megawrat-mascot__media megawrat-mascot__video" muted loop playsinline preload="none" poster="./assets/megawrat-mascot-poster.webp" data-src="./assets/megawrat-mascot.webm" aria-hidden="true"></video>
+            <img class="megawrat-mascot__media megawrat-mascot__image" src="./assets/megawrat-mascot-poster.webp" alt="" aria-hidden="true">
+          </div>
+          <span class="megawrat-float-label megawrat-label-top">MADE FOR THE 10TH</span>
+          <span class="megawrat-float-label megawrat-label-bottom">A LOCAL COMMUNITY APP</span>
+        </div>
+      </section>
+
+      <section class="megawrat-progress" id="megawrat-progress" aria-labelledby="megawrat-progress-title">
+        <div class="megawrat-section-head"><p class="megawrat-kicker"><span>01</span> / ONE CITY · ONE COMMUNITY</p><h2 id="megawrat-progress-title">YOUR CITY,<br><span>CLOSER.</span></h2></div>
+        <div class="megawrat-progress-copy"><p lang="ar" dir="rtl">ميجاورات بيجمع احتياجات أهل العاشر في مكان واحد: بيع وشراء من ناس المنطقة، صنايعية قريبين منك، وبلاغات للمفقودات.</p><p lang="ar" dir="rtl">فكرة التطبيق محلية من أولها لآخرها: تصفّح حسب الحي، وشوف اللي حواليك، وتواصل مباشرة.</p><div class="megawrat-build-line"><span>PROJECT STATUS</span><b><i></i> IN PROGRESS</b></div></div>
+      </section>
+
+      <section class="megawrat-features" aria-label="MEGAWRAT app highlights">
+        <div class="megawrat-features-heading" data-reveal>
+          <p class="megawrat-kicker"><span>02</span> / WHAT'S INSIDE</p>
+          <h2 lang="ar" dir="rtl">كل العاشر<br><span>في تطبيق واحد.</span></h2>
+          <p lang="ar" dir="rtl">أربع حاجات يومية، متجمّعة ومتقسّمة صح.</p>
+        </div>
+        <article class="megawrat-feature-card" data-reveal><span>01 / MARKETPLACE</span><div class="megawrat-feature-icon" aria-hidden="true">↗</div><h3 lang="ar" dir="rtl">إعلانات من ناس العاشر</h3><p lang="ar" dir="rtl">بيع واشتري جنب بيتك. حدّد الحي وتواصل مباشرة مع صاحب الإعلان.</p><small>LOCAL LISTINGS · NEIGHBORHOOD FIRST</small></article>
+        <article class="megawrat-feature-card" data-reveal><span>02 / SERVICES</span><div class="megawrat-feature-icon" aria-hidden="true">✳</div><h3 lang="ar" dir="rtl">صنايعي قريب منك</h3><p lang="ar" dir="rtl">اكتشف الخدمات القريبة، اطّلع على التقييمات، وكلّم مقدم الخدمة.</p><small>NEARBY HELP · DIRECT CONTACT</small></article>
+        <article class="megawrat-feature-card" data-reveal><span>03 / LOST & FOUND</span><div class="megawrat-feature-icon" aria-hidden="true">⌕</div><h3 lang="ar" dir="rtl">المفقودات</h3><p lang="ar" dir="rtl">بلّغ عن حاجة ضاعت أو انلقت، وساعدها ترجع لصاحبها.</p><small>COMMUNITY CARE · LOCAL REPORTS</small></article>
+        <article class="megawrat-feature-card" data-reveal><span>04 / NEIGHBORHOOD FIRST</span><div class="megawrat-feature-icon" aria-hidden="true">⌖</div><h3 lang="ar" dir="rtl">حي بحي</h3><p lang="ar" dir="rtl">فلتر بالحي والمنطقة في العاشر، وشوف اللي جنبك الأول.</p><small>LOCAL DISCOVERY · NO ACCOUNT TO BROWSE</small></article>
+      </section>
+
+      <section class="megawrat-coming" aria-label="More about MEGAWRAT is coming soon"><span class="megawrat-coming-number">03</span><div><p class="megawrat-kicker">NEXT UPDATE / SOON</p><h2>COMING<br><span>SOON.</span></h2></div><p lang="ar" dir="rtl">التطبيق لسه بيتطوّر. تفاصيل أكتر وصور من جوّه MEGAWRAT هتظهر هنا مع تقدّم الشغل.</p><span class="megawrat-coming-stamp">IN<br>PROGRESS</span></section>
+
+      <footer class="megawrat-footer"><p><span>PROJECT 03</span> / MEGAWRAT MOBILE APP</p><span>IN DEVELOPMENT · 2026</span></footer>
+    </main>
+  </div>
+</body>
+</html>
