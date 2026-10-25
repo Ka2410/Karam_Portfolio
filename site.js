@@ -625,36 +625,10 @@
 
 
 (() => {
-  const status = document.querySelector("[data-cache-status]");
-  const showStatus = (message, hideAfter = 0) => {
-    if (!status) return;
-    status.textContent = message;
-    status.hidden = false;
-    if (hideAfter) window.setTimeout(() => { status.hidden = true; }, hideAfter);
-  };
-
   if (!("serviceWorker" in navigator) || !window.isSecureContext) {
-    if (status) status.hidden = true;
     return;
   }
 
-  const alreadySaved = Boolean(navigator.serviceWorker.controller);
-  if (!alreadySaved) showStatus("Preparing the portfolio pages and images for faster visits…");
-
-  navigator.serviceWorker.addEventListener("controllerchange", () => {
-    showStatus("Portfolio saved for quick browsing on this device.", 5000);
-  }, { once: true });
-
-  navigator.serviceWorker.register("./sw.js").then((registration) => {
-    const installingWorker = registration.installing;
-    if (!installingWorker || alreadySaved) return;
-
-    installingWorker.addEventListener("statechange", () => {
-      if (installingWorker.state === "redundant") {
-        if (status) status.hidden = true;
-      }
-    });
-  }).catch(() => {
-    if (status) status.hidden = true;
-  });
+  // Cache pages and images silently so repeat visits are ready without a status banner.
+  navigator.serviceWorker.register("./sw.js").catch(() => {});
 })();
