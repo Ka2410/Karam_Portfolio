@@ -1,7 +1,7 @@
 (function(){
 /* ───────────── DATA ───────────── */
 var P=[
-{n:'Megawrat',ty:'Web app · PWA',ch:'Apps',c:'#A8FF1F',b:'#14130F',s:'mega',u:'https://megawrat.online/app/',
+{n:'Megawrat',ty:'Web app · PWA',ch:'Apps',c:'#A8FF1F',b:'#14130F',s:'mega',u:'https://megawrat.online',
  d:'A local super-app for 10th of Ramadan City: sell and buy by district, hire rated tradesmen, report lost and found. Installs from the browser, no store.',
  k:[['Coverage','44 districts · 90 blocks'],['Install','PWA, no APK'],['Language','Arabic-first']],
  f:['Classifieds by district across 7 categories','Rated services directory with direct contact','Push notifications on Android and iOS','Browse freely, sign in only to post or contact']},
